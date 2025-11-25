@@ -1,6 +1,6 @@
 import { useState } from "react";
-import StickyScrollDemo from "./components/sticky-scroll-demo";
 import StoryPage from "./components/story-page";
+import CommunityPage from "./components/community-page";
 
 type PageKey = "fortelling" | "medvirkning";
 
@@ -50,7 +50,9 @@ function App() {
         </div>
       </header>
 
-      <main className="pt-16">{page === "fortelling" ? <StoryPage /> : <StickyScrollDemo />}</main>
+      <main className="pt-16">
+        {page === "fortelling" ? <StoryPage /> : <CommunityPage />}
+      </main>
     </div>
   );
 }
